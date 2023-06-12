@@ -2,6 +2,7 @@ public class RomanNumerals {
 
     private enum Numeral {
         TEN(10, "X"),
+        NINE(9, "IX"),
         FIVE(5, "V"),
         FOUR(4, "IV"),
         ONE(1, "I");
@@ -19,13 +20,14 @@ public class RomanNumerals {
 
     public String convert(int inputNumber) {
         String romanNumeral = "";
-        if(inputNumber == 9) {
-            return "IX";
-        }
 
         while(inputNumber >= Numeral.TEN.number) {
             romanNumeral += Numeral.TEN.romanNumber;
             inputNumber -= Numeral.TEN.number;
+        }
+        if(inputNumber >= Numeral.NINE.number) {
+            romanNumeral += Numeral.NINE.romanNumber;
+            inputNumber -= Numeral.NINE.number;
         }
 
         if(inputNumber >= Numeral.FIVE.number) {
