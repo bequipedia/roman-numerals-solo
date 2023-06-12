@@ -1,5 +1,20 @@
 public class RomanNumerals {
 
+    private enum Numeral {
+        ONE(1, "I"),
+        FIVE(5, "V"),
+        TEN(10, "X");
+
+        private final int number;
+        private final String romanNumber;
+
+        Numeral(int number, String romanNumber) {
+
+            this.number = number;
+            this.romanNumber = romanNumber;
+        }
+    }
+
     public static final String V = "V";
     public static final String I = "I";
     public static final String X = "X";
@@ -9,16 +24,16 @@ public class RomanNumerals {
         if(inputNumber == 26) {
             return "XXVI";
         }
-        if(inputNumber >= 10) {
-            romanNumeral = X;
-            inputNumber -= 10;
+        if(inputNumber >= Numeral.TEN.number) {
+            romanNumeral = Numeral.TEN.romanNumber;
+            inputNumber -= Numeral.TEN.number;
         }
-        if(inputNumber >= 5) {
-            romanNumeral += V;
-            inputNumber -= 5;
+        if(inputNumber >= Numeral.FIVE.number) {
+            romanNumeral += Numeral.FIVE.romanNumber;
+            inputNumber -= Numeral.FIVE.number;
         }
-        for(int i = 0; i < inputNumber; i++) {
-            romanNumeral += I;
+        if(inputNumber <= 3) {
+            romanNumeral += Numeral.ONE.romanNumber.repeat(inputNumber);
         }
 
         return romanNumeral;
