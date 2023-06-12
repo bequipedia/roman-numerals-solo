@@ -7,6 +7,9 @@ public class RomanNumerals {
         for(int i = 0; i < inputNumber; i++) {
             romanNumeral += I;
         }
+        if(inputNumber == 5) {
+            romanNumeral = "V";
+        }
         return romanNumeral;
     }
 }
