@@ -117,5 +117,15 @@ public class RomanNumeralsTest {
 
         assertEquals(expectedOutput, actualOutput);
     }
+    @Test
+    void should_return_IV_when_4_given() {
+        RomanNumerals romanNumerals = new RomanNumerals();
+        String expectedOutput = "IV";
+        int inputNumber = 4;
+
+        String actualOutput = romanNumerals.convert(inputNumber);
+
+        assertEquals(expectedOutput, actualOutput);
+    }
 
 }
