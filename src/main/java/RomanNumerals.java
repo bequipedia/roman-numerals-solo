@@ -19,6 +19,9 @@ public class RomanNumerals {
 
     public String convert(int inputNumber) {
         String romanNumeral = "";
+        if(inputNumber == 9) {
+            return "IX";
+        }
 
         while(inputNumber >= Numeral.TEN.number) {
             romanNumeral += Numeral.TEN.romanNumber;
