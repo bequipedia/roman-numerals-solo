@@ -1,11 +1,12 @@
 public class RomanNumerals {
+
+    public static final String I = "I";
+
     public String convert(int inputNumber) {
-        if(inputNumber == 3) {
-            return "III";
+        String romanNumeral = "";
+        for(int i = 0; i < inputNumber; i++) {
+            romanNumeral += I;
         }
-        if(inputNumber == 2) {
-            return "II";
-        }
-        return "I";
+        return romanNumeral;
     }
 }
