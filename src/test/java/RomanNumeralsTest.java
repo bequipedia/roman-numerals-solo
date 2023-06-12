@@ -137,5 +137,15 @@ public class RomanNumeralsTest {
 
         assertEquals(expectedOutput, actualOutput);
     }
+    @Test
+    void should_return_IX_when_9_given() {
+        RomanNumerals romanNumerals = new RomanNumerals();
+        String expectedOutput = "IX";
+        int inputNumber = 9;
+
+        String actualOutput = romanNumerals.convert(inputNumber);
+
+        assertEquals(expectedOutput, actualOutput);
+    }
 
 }

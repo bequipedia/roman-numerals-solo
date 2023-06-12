@@ -20,10 +20,6 @@ public class RomanNumerals {
     public String convert(int inputNumber) {
         String romanNumeral = "";
 
-        if(inputNumber == 24) {
-            return "XXIV";
-        }
-
         while(inputNumber >= Numeral.TEN.number) {
             romanNumeral += Numeral.TEN.romanNumber;
             inputNumber -= Numeral.TEN.number;
