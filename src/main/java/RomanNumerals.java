@@ -14,6 +14,9 @@ public class RomanNumerals {
         if(inputNumber == 6) {
             romanNumeral = V + I;
         }
+        if(inputNumber == 7) {
+            romanNumeral = V + I + I;
+        }
 
         return romanNumeral;
     }
