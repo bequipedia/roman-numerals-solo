@@ -17,30 +17,36 @@ public class RomanNumerals {
         }
     }
 
-
     public String convert(int inputNumber) {
         String romanNumeral = "";
 
-        while(inputNumber >= Numeral.TEN.number) {
-            romanNumeral += Numeral.TEN.romanNumber;
-            inputNumber -= Numeral.TEN.number;
+        for (Numeral numberKey : Numeral.values()) {
+            while (inputNumber >= numberKey.number) {
+                romanNumeral += numberKey.romanNumber;
+                inputNumber -= numberKey.number;
+            }
         }
-        if(inputNumber >= Numeral.NINE.number) {
-            romanNumeral += Numeral.NINE.romanNumber;
-            inputNumber -= Numeral.NINE.number;
-        }
-
-        if(inputNumber >= Numeral.FIVE.number) {
-            romanNumeral += Numeral.FIVE.romanNumber;
-            inputNumber -= Numeral.FIVE.number;
-        }
-        if(inputNumber >= Numeral.FOUR.number) {
-            romanNumeral += Numeral.FOUR.romanNumber;
-            inputNumber -= Numeral.FOUR.number;
-        }
-        if(inputNumber <= 3) {
-            romanNumeral += Numeral.ONE.romanNumber.repeat(inputNumber);
-        }
+//
+//        while(inputNumber >= Numeral.TEN.number) {
+//            romanNumeral += Numeral.TEN.romanNumber;
+//            inputNumber -= Numeral.TEN.number;
+//        }
+//        while(inputNumber >= Numeral.NINE.number) {
+//            romanNumeral += Numeral.NINE.romanNumber;
+//            inputNumber -= Numeral.NINE.number;
+//        }
+//
+//        while(inputNumber >= Numeral.FIVE.number) {
+//            romanNumeral += Numeral.FIVE.romanNumber;
+//            inputNumber -= Numeral.FIVE.number;
+//        }
+//        while(inputNumber >= Numeral.FOUR.number) {
+//            romanNumeral += Numeral.FOUR.romanNumber;
+//            inputNumber -= Numeral.FOUR.number;
+//        }
+//        if(inputNumber <= 3) {
+//            romanNumeral += Numeral.ONE.romanNumber.repeat(inputNumber);
+//        }
 
         return romanNumeral;
     }
