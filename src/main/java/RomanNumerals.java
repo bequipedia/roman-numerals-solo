@@ -19,18 +19,11 @@ public class RomanNumerals {
     public String convert(int inputNumber) {
         String romanNumeral = "";
 
-        if(inputNumber >= Numeral.TEN.number*3) {
+        while(inputNumber >= Numeral.TEN.number) {
             romanNumeral += Numeral.TEN.romanNumber;
             inputNumber -= Numeral.TEN.number;
         }
-        if(inputNumber >= Numeral.TEN.number*2) {
-            romanNumeral += Numeral.TEN.romanNumber;
-            inputNumber -= Numeral.TEN.number;
-        }
-        if(inputNumber >= Numeral.TEN.number) {
-            romanNumeral += Numeral.TEN.romanNumber;
-            inputNumber -= Numeral.TEN.number;
-        }
+
         if(inputNumber >= Numeral.FIVE.number) {
             romanNumeral += Numeral.FIVE.romanNumber;
             inputNumber -= Numeral.FIVE.number;
