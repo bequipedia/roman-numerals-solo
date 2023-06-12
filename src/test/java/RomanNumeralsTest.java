@@ -37,4 +37,14 @@ public class RomanNumeralsTest {
 
         assertEquals(expectedOutput, actualOutput);
     }
+    @Test
+    void should_return_V_when_5_given() {
+        RomanNumerals romanNumerals = new RomanNumerals();
+        String expectedOutput = "V";
+        int inputNumber = 5;
+
+        String actualOutput = romanNumerals.convert(inputNumber);
+
+        assertEquals(expectedOutput, actualOutput);
+    }
 }
