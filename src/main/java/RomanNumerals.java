@@ -18,17 +18,17 @@ public class RomanNumerals {
 
     public String convert(int inputNumber) {
         String romanNumeral = "";
-        if(inputNumber == 26) {
-            return "XXVI";
+
+        if(inputNumber >= Numeral.TEN.number*3) {
+            romanNumeral += Numeral.TEN.romanNumber;
+            inputNumber -= Numeral.TEN.number;
         }
-        if(inputNumber == 20) {
-            return "XX";
-        }
-        if(inputNumber == 30) {
-            return "XXX";
+        if(inputNumber >= Numeral.TEN.number*2) {
+            romanNumeral += Numeral.TEN.romanNumber;
+            inputNumber -= Numeral.TEN.number;
         }
         if(inputNumber >= Numeral.TEN.number) {
-            romanNumeral = Numeral.TEN.romanNumber;
+            romanNumeral += Numeral.TEN.romanNumber;
             inputNumber -= Numeral.TEN.number;
         }
         if(inputNumber >= Numeral.FIVE.number) {
