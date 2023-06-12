@@ -19,9 +19,7 @@ public class RomanNumerals {
 
     public String convert(int inputNumber) {
         String romanNumeral = "";
-        if(inputNumber == 4) {
-            romanNumeral = "IV";
-        }
+
         if(inputNumber == 24) {
             return "XXIV";
         }
@@ -34,6 +32,10 @@ public class RomanNumerals {
         if(inputNumber >= Numeral.FIVE.number) {
             romanNumeral += Numeral.FIVE.romanNumber;
             inputNumber -= Numeral.FIVE.number;
+        }
+        if(inputNumber >= Numeral.FOUR.number) {
+            romanNumeral += Numeral.FOUR.romanNumber;
+            inputNumber -= Numeral.FOUR.number;
         }
         if(inputNumber <= 3) {
             romanNumeral += Numeral.ONE.romanNumber.repeat(inputNumber);
