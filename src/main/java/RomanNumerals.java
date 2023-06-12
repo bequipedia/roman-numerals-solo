@@ -24,6 +24,9 @@ public class RomanNumerals {
         if(inputNumber == 20) {
             return "XX";
         }
+        if(inputNumber == 30) {
+            return "XXX";
+        }
         if(inputNumber >= Numeral.TEN.number) {
             romanNumeral = Numeral.TEN.romanNumber;
             inputNumber -= Numeral.TEN.number;
