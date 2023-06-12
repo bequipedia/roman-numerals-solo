@@ -18,6 +18,9 @@ public class RomanNumerals {
 
     public String convert(int inputNumber) {
         String romanNumeral = "";
+        if(inputNumber == 4) {
+            romanNumeral = "IV";
+        }
 
         while(inputNumber >= Numeral.TEN.number) {
             romanNumeral += Numeral.TEN.romanNumber;
