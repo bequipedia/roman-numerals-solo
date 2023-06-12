@@ -5,17 +5,16 @@ public class RomanNumerals {
 
     public String convert(int inputNumber) {
         String romanNumeral = "";
-        for(int i = 0; i < inputNumber; i++) {
-            romanNumeral += I;
+        if(inputNumber >= 10) {
+            romanNumeral = "X";
+            inputNumber -= 10;
         }
         if(inputNumber >= 5) {
             romanNumeral = V;
+            inputNumber -= 5;
         }
-        if(inputNumber == 6) {
-            romanNumeral = V + I;
-        }
-        if(inputNumber == 7) {
-            romanNumeral = V + I + I;
+        for(int i = 0; i < inputNumber; i++) {
+            romanNumeral += I;
         }
 
         return romanNumeral;
