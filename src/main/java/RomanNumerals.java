@@ -10,7 +10,7 @@ public class RomanNumerals {
             inputNumber -= 10;
         }
         if(inputNumber >= 5) {
-            romanNumeral = V;
+            romanNumeral += V;
             inputNumber -= 5;
         }
         for(int i = 0; i < inputNumber; i++) {
