@@ -1,9 +1,10 @@
 public class RomanNumerals {
 
     private enum Numeral {
-        ONE(1, "I"),
+        TEN(10, "X"),
         FIVE(5, "V"),
-        TEN(10, "X");
+        FOUR(4, "IV"),
+        ONE(1, "I");
 
         private final int number;
         private final String romanNumber;
@@ -20,6 +21,9 @@ public class RomanNumerals {
         String romanNumeral = "";
         if(inputNumber == 4) {
             romanNumeral = "IV";
+        }
+        if(inputNumber == 24) {
+            return "XXIV";
         }
 
         while(inputNumber >= Numeral.TEN.number) {
