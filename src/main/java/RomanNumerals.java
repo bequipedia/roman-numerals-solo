@@ -5,13 +5,16 @@ public class RomanNumerals {
 
     public String convert(int inputNumber) {
         String romanNumeral = "";
-        if(inputNumber >= 5) {
-            romanNumeral = V;
-            inputNumber -= 5;
-        }
         for(int i = 0; i < inputNumber; i++) {
             romanNumeral += I;
         }
+        if(inputNumber >= 5) {
+            romanNumeral = V;
+        }
+        if(inputNumber == 6) {
+            romanNumeral = V + I;
+        }
+
         return romanNumeral;
     }
 }
