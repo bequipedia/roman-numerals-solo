@@ -87,5 +87,15 @@ public class RomanNumeralsTest {
 
         assertEquals(expectedOutput, actualOutput);
     }
+    @Test
+    void should_return_XXVI_when_26_given() {
+        RomanNumerals romanNumerals = new RomanNumerals();
+        String expectedOutput = "XXVI";
+        int inputNumber = 26;
+
+        String actualOutput = romanNumerals.convert(inputNumber);
+
+        assertEquals(expectedOutput, actualOutput);
+    }
 
 }
