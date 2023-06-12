@@ -16,4 +16,14 @@ public class RomanNumeralsTest {
 
         assertEquals(expectedOutput, actualOutput);
     }
+    @Test
+    void should_return_2_when_II_given() {
+        RomanNumerals romanNumerals = new RomanNumerals();
+        String expectedOutput = "II";
+        int inputNumber = 2;
+
+        String actualOutput = romanNumerals.convert(inputNumber);
+
+        assertEquals(expectedOutput, actualOutput);
+    }
 }
